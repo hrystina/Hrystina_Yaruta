@@ -1,2 +1,26 @@
-<h1> Hello world by Hrystina</h1>
-<p> html test </p>
+<!-- http://aws.random.cat/meow -->
+ <html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+function catloader() {
+  $.get("http://aws.random.cat/meow").done(
+    function(data) {
+      $("#cat").append("<img width=100 src='" + data.file + "' />")
+    })
+}
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+<div id="cat">
+</div>
+<button onclick="catloader()"> I want one more cat </button>
+
+</body>
